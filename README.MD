@@ -42,6 +42,11 @@ kubectl apply -f <file path>
 kubectl get pods
 ```
 
+## print info about a pod
+```
+kubectl describe pods
+```
+
 ## print status of services
 ```
 kubectl get services
@@ -55,4 +60,9 @@ docker tag <image id> <username>/<docker repo>:<desired tag>
 ## Push the docker image
 ```
 docker push <username>/<docker repo>:<tag>
+```
+
+## See logs of container
+```
+kubectl logs <pod name> <container>
 ```
