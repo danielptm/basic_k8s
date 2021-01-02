@@ -46,3 +46,13 @@ kubectl get pods
 ```
 kubectl get services
 ```
+
+## Tag locally built docker image
+```
+docker tag <image id> <username>/<docker repo>:<desired tag>
+```
+
+## Push the docker image
+```
+docker push <username>/<docker repo>:<tag>
+```
