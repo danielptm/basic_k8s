@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+  fe:
+    build:
+      context: .
+      dockerfile: ./HelloWorldAng/Dockerfile
+      network: host
+    image: fe:HelloWorldAngular
+    depends_on:
+      - be
+    ports:
+      - "8080:8080"
+    links:
+      - be
+  be:
+    build:
+      context: .
+      dockerfile: ./HelloWorldJava/Dockerfile
+      network: host
+    image: be:HelloWorldJava
+    ports:
+      - "5000:5000"
